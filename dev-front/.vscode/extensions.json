@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "donjayamanne.githistory",
+    "codezombiech.gitignore",
+    "xabikos.JavaScriptSnippets",
+    "sdras.vue-vscode-snippets",
+    "hollowtree.vue-snippets",
+    "rvest.vs-code-prettier-eslint",
+    "esbenp.prettier-vscode",
+    "christian-kohler.npm-intellisense",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "pranaygp.vscode-css-peek",
+    "Vue.vscode-typescript-vue-plugin",
+    "streetsidesoftware.code-spell-checker",
+    "wayou.vscode-todo-highlight",
+    "ChakrounAnas.turbo-console-log",
+    "chrmarti.regex"
+  ]
+}

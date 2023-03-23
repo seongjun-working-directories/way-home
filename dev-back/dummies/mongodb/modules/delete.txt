@@ -1,0 +1,30 @@
+import { MongoClient } from 'mongodb';
+import type { User, Article } from '../types';
+import dotenv from 'dotenv';
+dotenv.config();
+
+export async function deleteUser(userEmail: string) {
+  const client = new MongoClient(process.env.MONGO_SECRET_KEY as string);
+  await client.connect();
+
+  const result = await client
+    .db('huegaesou')
+    .collection('users')
+    .deleteOne({ user_email: userEmail });
+
+  // [TEST]
+  console.log(`Delete Count>>> ${result.deletedCount}`);
+}
+
+export async function deleteArticle(articleId: string) {
+  const client = new MongoClient(process.env.MONGO_SECRET_KEY as string);
+  await client.connect();
+
+  const result = await client
+    .db('huegaesou')
+    .collection('articles')
+    .deleteOne({ article_id: articleId });
+
+  // [TEST]
+  console.log(`Delete Count>>> ${result.deletedCount}`);
+}

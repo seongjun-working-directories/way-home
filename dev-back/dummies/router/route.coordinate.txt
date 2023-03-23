@@ -1,0 +1,15 @@
+import express from 'express';
+import type { Request, Response } from 'express';
+import { createCoordinate } from '../mongodb/modules/coordinate';
+
+const router = express.Router();
+
+router.get('/coordinates', async (req: Request, res: Response) => {
+  await createCoordinate();
+
+  return res.status(200).json({
+    message: "successfully launched"
+  });
+});
+
+export { router };
